@@ -18,14 +18,15 @@ def setup():
     der=loadImage('derevoNORM-removebg-preview.png')
 def draw():
     background(255)
-    global q,x,y,w,e,kam,der
+    global q,x,y,w,e,kam,der,xd
     catcat(q, x, y)
     plat(w)
-    kamen(kam)
-    derevo(der)
+    kamen(kam, x, y)
+    derevo(x, y, der)
     if keyPressed == False:
         if y<423:
             y=y+5
+    
 def keyPressed():
     global y
     if key == CODED:
